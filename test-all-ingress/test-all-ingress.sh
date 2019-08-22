@@ -8,6 +8,6 @@ do
    : 
    # do whatever on $i
    echo "Checking $i.."
-   curl -sL -w "HTTP Response: %{http_code}\\n" https://$i  -o /dev/null  # Test endpoint with curl, assiming HTTPS here
+   curl -sL -w "HTTP Response: %{http_code}\\n" https://$i  -o /dev/null  # Test endpoint with curl, assuming HTTPS here
    echo ""
 done

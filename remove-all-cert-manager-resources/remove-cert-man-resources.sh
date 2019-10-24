@@ -28,7 +28,7 @@ do
    kubectl delete Issuers,ClusterIssuers,Certificates,CertificateRequests,Orders,Challenges --namespace $i --all
 done
 
-echo "Checking all removed (should see nothing returned).."
+echo "Checking all removed (should see no resources returned):"
 kubectl get Issuers,ClusterIssuers,Certificates,CertificateRequests,Orders,Challenges --all-namespaces
 echo ""
 echo "Done."

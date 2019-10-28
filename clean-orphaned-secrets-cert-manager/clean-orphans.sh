@@ -9,7 +9,7 @@ if [[ $# -lt 1 ]] ; then
     NAMESPACE="default"
 fi
 
-# whitelist certs that should never be removed? i.e. default le-cert?
+# TODO: whitelist certs that should never be removed? i.e. default le-cert? For now we'll just prompt before deleting to be safe
 
 SECRETS=($(kubectl --namespace $NAMESPACE get secrets | grep tls | awk '{print $1}'))  # Array of all secrets in the namespace
 CERTS=($(kubectl --namespace $NAMESPACE get certs | grep True | awk '{print $1}'))  # Array of all certs in the namespace
